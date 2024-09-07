@@ -1,35 +1,37 @@
 import csv
 
-file_path = "Timetable.csv"
+def find_timetable_entry(timetable, date, time, room, unit_code, day):
+    for entry in timetable:
+        if ('date' in entry and entry['date'] == date and
+            'time' in entry and entry['time'] == time and
+            'room' in entry and entry['room'] == room and
+            'unit_code' in entry and entry['unit_code'] == unit_code and
+            'day' in entry and entry['day'] == day):
+            return entry
+    return None
 
-# Read the CSV file
-with open(file_path, newline='') as csvfile:
-    reader = csv.reader(csvfile)
-    data = list(reader)
+def load_timetable_from_csv(file_path):
+    timetable = []
+    with open(file_path, mode='r') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            timetable.append(row)
+    return timetable
 
-# Extract headers
-dates = data[1]
-times = data[2]
-
-# Combine dates and times to create multi-level columns
-columns = []
-for i in range(len(dates)):
-    if dates[i] and times[i]:
-        columns.append(f"{dates[i]} {times[i]}")
-    elif dates[i]:
-        columns.append(dates[i])
-    elif times[i]:
-        columns.append(times[i])
+def main():
+    timetable = load_timetable_from_csv('Timetable.csv')
+    
+    date = '13/08/2024'
+    time = '1'
+    room = ''
+    unit_code = ''
+    day = 'Tuesday'
+    
+    result = find_timetable_entry(timetable, date, time, room, unit_code, day)
+    if result:
+        print("Timetable entry found:", result)
     else:
-        columns.append("")
+        print("Timetable entry not found")
 
-# Create a list of dictionaries for rows with non-empty values
-cleaned_data = []
-for row in data[3:]:
-    row_dict = {columns[i]: row[i] for i in range(len(row)) if row[i]}
-    if row_dict:
-        cleaned_data.append(row_dict)
-
-# Print the cleaned timetable
-for row in cleaned_data:
-    print(row)
+if __name__ == "__main__":
+    main()
