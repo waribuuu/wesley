@@ -7,7 +7,7 @@ import json
 class TimetableGUI:
     def __init__(self, master, timetable_data):
         self.master = master
-        self.master.title("Wesley")
+        self.master.title("Timetable Generator")
         self.master.geometry("1000x700")  # Enlarged the window
 
         self.master.configure(bg="#f0f8ff")  # Light blue background
@@ -217,11 +217,7 @@ if __name__ == "__main__":
         with open("output.json", "r") as file:
             timetable_data = json.load(file)
     except FileNotFoundError:
-<<<<<<< HEAD
-        messagebox.showerror("File Error", "File not found.")
-=======
         messagebox.showerror("File Error", "timetable.json file not found.")
->>>>>>> origin/main
         timetable_data = []
 
     root = tk.Tk()
