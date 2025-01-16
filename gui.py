@@ -217,7 +217,11 @@ if __name__ == "__main__":
         with open("output.json", "r") as file:
             timetable_data = json.load(file)
     except FileNotFoundError:
+<<<<<<< HEAD
         messagebox.showerror("File Error", "File not found.")
+=======
+        messagebox.showerror("File Error", "timetable.json file not found.")
+>>>>>>> origin/main
         timetable_data = []
 
     root = tk.Tk()
