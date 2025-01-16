@@ -20,12 +20,12 @@ class ExcelMapper:
 
     def map_headings(
         self,
-        header_row=1,
+        header_row=0,
         time_row=2,
         room_col=0,
         chapel_label="CHAPEL",
         day_columns={
-            "Monday": (1, 3),  # B-D
+            "Monday ": (1, 3),  # B-D
             "Tuesday": (4, 7),  # E-H
             "Wednesday": (8, 10),  # I-K
             "Thursday": (11, 14),  # L-O
@@ -35,22 +35,13 @@ class ExcelMapper:
     ):
         """
         Map headings (room, day & date, time, and unit code) to a clean JSON format.
-
-        :param header_row: Row number containing the day and date.
-        :param time_row: Row number containing the time (excluding the first column).
-        :param room_col: Column number containing the room names.
-        :param chapel_label: Label to exclude for unit codes and times (e.g., "CHAPEL").
-        :param day_columns: Dictionary mapping days to column ranges (1-based index).
-        :param excluded_columns: List of 1-based column indices to exclude except their day_date.
-        :return: A cleaned JSON structure with the specified mappings.
         """
         if self.dataframe is None:
             raise ValueError("Load an Excel file before mapping headings.")
 
         df = self.dataframe.copy()
-
-        # Initialize output
         output = []
+        day_date_columns = [1, 4, 8, 11, 15]  # Starting columns for each day
 
         # Loop through day columns to map data
         for day, (start_col, end_col) in day_columns.items():
@@ -61,28 +52,39 @@ class ExcelMapper:
                 if col + 1 not in excluded_columns
             ]
 
-            # Extract day_date for all columns in the range (keep excluded ones for day_date)
-            full_day_date = (
-                df.iloc[header_row, start_col : end_col + 1]
-                .fillna("")
-                .astype(str)
-                .tolist()
-            )
-            time = [
-                full_day_date[col_idx - start_col]
-                for col_idx in range(start_col, end_col + 1)
-                if col_idx in valid_columns
-            ]
+            # Get times for this day's columns
+            times = []
+            for col in valid_columns:
+                time_value = df.iloc[time_row, col]
+                if pd.isna(time_value):
+                    times.append("")
+                else:
+                    # If it's a datetime, format it, otherwise keep as string
+                    if isinstance(time_value, pd.Timestamp):
+                        times.append(time_value.strftime("%H:%M"))
+                    else:
+                        times.append(str(time_value).strip())
 
-            # Extract time for valid columns
-            day_date = df.iloc[time_row, valid_columns].fillna("").astype(str).tolist()
+            # Get day and date information
+            full_day_date = None
+            for col in day_date_columns:
+                if col >= start_col and col <= end_col:
+                    full_day_date = df.iloc[header_row, col]
+                    break
 
-            # Extract unit data for valid columns
+            if isinstance(full_day_date, str):
+                parts = full_day_date.split(" ", 1)
+                day_part = parts[0]
+                date_part = parts[1] if len(parts) > 1 else ""
+            else:
+                day_part, date_part = day, ""
+
+            # Extract unit data
             for i in range(time_row + 1, len(df)):
                 room = df.iloc[i, room_col]
                 room = str(room).strip() if pd.notna(room) else None
                 if not room or room == chapel_label:
-                    continue  # Skip empty rooms or "CHAPEL"
+                    continue
 
                 # Map unit codes for the current day
                 for col_idx, unit_code in enumerate(df.iloc[i, valid_columns].tolist()):
@@ -90,13 +92,14 @@ class ExcelMapper:
                     if (
                         unit_code
                         and unit_code != chapel_label
-                        and time[col_idx] != chapel_label
+                        and times[col_idx] != chapel_label
                     ):
                         output.append(
                             {
                                 "room": room,
-                                "day_date": day,
-                                "time": time[col_idx],
+                                "day": day_part,
+                                "date": date_part,
+                                "time": times[col_idx],
                                 "unit_code": unit_code,
                             }
                         )
@@ -114,15 +117,15 @@ class ExcelMapper:
             raise ValueError(f"Failed to export data to JSON. Error: {e}")
 
 
-# Filepath for the Excel file
-filepath = "/home/waribu/workspace/myPython/myTimetable/FINAL_ EXAMINATION TIMETABLE -MAY 2024.xlsx"
+# Usage example
+if __name__ == "__main__":
+    filepath = "/home/waribu/workspace/myPython/myTimetable/FINAL_ EXAMINATION TIMETABLE -MAY 2024.xlsx"
 
-# Usage
-try:
-    mapper = ExcelMapper(filepath)
-    mapper.load_excel()  # Load the Excel file
-    cleaned_data = mapper.map_headings()  # Extract and clean the data
-    mapper.export_to_json(cleaned_data, "output.json")  # Export to JSON file
-    print("Cleaned data successfully exported to output.json")
-except Exception as e:
-    print(f"An error occurred: {e}")
+    try:
+        mapper = ExcelMapper(filepath)
+        mapper.load_excel()
+        cleaned_data = mapper.map_headings()
+        mapper.export_to_json(cleaned_data, "output.json")
+        print("Cleaned data successfully exported to output.json")
+    except Exception as e:
+        print(f"An error occurred: {e}")
