@@ -25,12 +25,13 @@ class ExcelMapper:
         room_col=0,
         chapel_label="CHAPEL",
         day_columns={
-            "Monday": (1, 3),
-            "Tuesday": (4, 7),
-            "Wednesday": (8, 10),
-            "Thursday": (11, 14),
-            "Friday": (15, 17),
+            "Monday": (1, 3),  # B-D
+            "Tuesday": (4, 7),  # E-H
+            "Wednesday": (8, 10),  # I-K
+            "Thursday": (11, 14),  # L-O
+            "Friday": (15, 17),  # P-R
         },
+        excluded_columns=[4, 11],  # 1-based indices for E and L
     ):
         """
         Map headings (room, day & date, time, and unit code) to a clean JSON format.
@@ -38,8 +39,9 @@ class ExcelMapper:
         :param header_row: Row number containing the day and date.
         :param time_row: Row number containing the time (excluding the first column).
         :param room_col: Column number containing the room names.
-        :param chapel_label: Label to exclude for unit codes (e.g., "CHAPEL").
+        :param chapel_label: Label to exclude for unit codes and times (e.g., "CHAPEL").
         :param day_columns: Dictionary mapping days to column ranges (1-based index).
+        :param excluded_columns: List of 1-based column indices to exclude except their day_date.
         :return: A cleaned JSON structure with the specified mappings.
         """
         if self.dataframe is None:
@@ -52,23 +54,30 @@ class ExcelMapper:
 
         # Loop through day columns to map data
         for day, (start_col, end_col) in day_columns.items():
-            # Extract day and date for this range
-            day_date = (
+            # Adjust start and end to account for excluded columns
+            valid_columns = [
+                col
+                for col in range(start_col, end_col + 1)
+                if col + 1 not in excluded_columns  # Convert 0-based index to 1-based
+            ]
+
+            # Extract day_date for all columns in the range (keep excluded ones for day_date)
+            full_day_date = (
                 df.iloc[header_row, start_col : end_col + 1]
                 .fillna("")
                 .astype(str)
                 .tolist()
             )
+            day_date = [
+                full_day_date[col_idx - start_col]
+                for col_idx in range(start_col, end_col + 1)
+                if col_idx in valid_columns
+            ]
 
-            # Extract time for this range
-            time = (
-                df.iloc[time_row, start_col : end_col + 1]
-                .fillna("")
-                .astype(str)
-                .tolist()
-            )
+            # Extract time for valid columns
+            time = df.iloc[time_row, valid_columns].fillna("").astype(str).tolist()
 
-            # Extract unit data for this range
+            # Extract unit data for valid columns
             for i in range(time_row + 1, len(df)):
                 room = df.iloc[i, room_col]
                 room = str(room).strip() if pd.notna(room) else None
@@ -76,16 +85,19 @@ class ExcelMapper:
                     continue  # Skip empty rooms or "CHAPEL"
 
                 # Map unit codes for the current day
-                for col_idx, unit_code in enumerate(
-                    df.iloc[i, start_col : end_col + 1].tolist()
-                ):
-                    if pd.notna(unit_code) and str(unit_code).strip() != "":
+                for col_idx, unit_code in enumerate(df.iloc[i, valid_columns].tolist()):
+                    unit_code = str(unit_code).strip() if pd.notna(unit_code) else None
+                    if (
+                        unit_code
+                        and unit_code != chapel_label
+                        and time[col_idx] != chapel_label
+                    ):
                         output.append(
                             {
                                 "room": room,
                                 "day_date": day_date[col_idx],
                                 "time": time[col_idx],
-                                "unit_code": str(unit_code).strip(),
+                                "unit_code": unit_code,
                             }
                         )
 
@@ -103,7 +115,7 @@ class ExcelMapper:
 
 
 # Filepath for the Excel file
-filepath = "FINAL_ EXAMINATION TIMETABLE -MAY 2024.xlsx"
+filepath = "/home/waribu/workspace/myPython/myTimetable/FINAL_ EXAMINATION TIMETABLE -MAY 2024.xlsx"
 
 # Usage
 try:
