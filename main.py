@@ -68,14 +68,14 @@ class ExcelMapper:
                 .astype(str)
                 .tolist()
             )
-            day_date = [
+            time = [
                 full_day_date[col_idx - start_col]
                 for col_idx in range(start_col, end_col + 1)
                 if col_idx in valid_columns
             ]
 
             # Extract time for valid columns
-            time = df.iloc[time_row, valid_columns].fillna("").astype(str).tolist()
+            day_date = df.iloc[time_row, valid_columns].fillna("").astype(str).tolist()
 
             # Extract unit data for valid columns
             for i in range(time_row + 1, len(df)):
