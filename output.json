@@ -1,805 +1,939 @@
 [
     {
         "room": "LR13",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL1112A"
     },
     {
         "room": "LR14",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL111A"
     },
     {
         "room": "SB-G04",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DAG019A"
     },
     {
         "room": "SB-G08",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DEV111A/SWK113A"
     },
     {
         "room": "SB-G09",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DEV211A/SWK213A"
     },
     {
         "room": "SB-202",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "EDU226A"
     },
     {
         "room": "BCC1",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DIR005A"
     },
     {
         "room": "BCC2",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "COM445A"
     },
     {
         "room": "BCC2",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL111B"
     },
     {
         "room": "BCC3",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "BUS414A"
     },
     {
         "room": "BCC3",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL113B"
     },
     {
         "room": "BCC 5",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL111C"
     },
     {
         "room": "BCC 6",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL112B"
     },
     {
         "room": "BCC7",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "PSY417A"
     },
     {
         "room": "BCC7",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL112C"
     },
     {
         "room": "BCC8",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DBM020A"
     },
     {
         "room": "BCC8",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "BIL114C"
     },
     {
         "room": "BCC9",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "DIR060A"
     },
     {
         "room": "BCC11",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "ICO018A"
     },
     {
         "room": "BCC12",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "COM223A"
     },
     {
         "room": "1CT114",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "ACS331A/MIS228A"
     },
     {
         "room": "1CT114",
-        "day_date": "Monday",
-        "time": "11:30AM-1:30PM ",
+        "day": "MONDAY",
+        "date": "12/08/2024",
+        "time": "11:30AM-1:30PM",
         "unit_code": "DICT123A"
     },
     {
         "room": "ICT 115",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "BMS102A"
     },
     {
         "room": "ICT201",
-        "day_date": "Monday",
+        "day": "MONDAY",
+        "date": "12/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "EEE221A"
     },
     {
         "room": "SB-G04",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "DEV213A"
     },
     {
         "room": "SB-G09",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "DEV416A"
     },
     {
         "room": "SB-204",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "FRE413A"
     },
     {
         "room": "BCC1",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "INS111A"
     },
     {
         "room": "BCC1",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "PSY312A"
     },
     {
         "room": "BCC1",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "RET333A"
     },
     {
         "room": "BCC2",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "INS111B"
     },
     {
         "room": "BCC2",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "PSY414A"
     },
     {
         "room": "BCC2",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "ENG098A"
     },
     {
         "room": "BCC3",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "INS112A"
     },
     {
         "room": "BCC3",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "RET334A"
     },
     {
         "room": "BCC3",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "ENG098B"
     },
     {
         "room": "BCC 5",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "INS112B"
     },
     {
         "room": "BCC 5",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "SWK212A"
     },
     {
         "room": "BCC 5",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "ENG111A/ENG113A"
     },
     {
         "room": "BCC 6",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "INS112C"
     },
     {
         "room": "BCC 6",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "ECO211A"
     },
     {
         "room": "BCC 6",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "ENG111B/ENG113B"
     },
     {
         "room": "BCC7",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "COM101A"
     },
     {
         "room": "BCC7",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "ENG111C"
     },
     {
         "room": "BCC8",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "COM101B"
     },
     {
         "room": "BCC8",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "DBM021A"
     },
     {
         "room": "BCC8",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "ENG111D"
     },
     {
         "room": "BCC9",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "DGE102A"
     },
     {
         "room": "BCC9",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "DIR035A"
     },
     {
         "room": "BCC9",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "ENG111E"
     },
     {
         "room": "BCC10",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "ICC012A"
     },
     {
         "room": "BCC11",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "ICO066A"
     },
     {
         "room": "1CT114",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MAT120A"
     },
     {
         "room": "1CT114",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "DICT112A"
     },
     {
         "room": "ICT 115",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MIS320A/ACS251A"
     },
     {
         "room": "ICT201",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "DICT229A"
     },
     {
         "room": "MUS1",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MUS219A(A)"
     },
     {
         "room": "MUS2",
-        "day_date": "Tuesday",
+        "day": "TUESDAY",
+        "date": "13/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MUS219B(A)"
     },
     {
         "room": "LR14",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "ENG112A/ENG114A"
     },
     {
         "room": "SB-G08",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DEV319A"
     },
     {
         "room": "BCC1",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "BUS113A"
     },
     {
         "room": "BCC2",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "ACC311A"
     },
     {
         "room": "BCC2",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "ENG112B/ENG114B"
     },
     {
         "room": "BCC3",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "PSY211A"
     },
     {
         "room": "BCC3",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "ENG112C"
     },
     {
         "room": "BCC 5",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "STA211A"
     },
     {
         "room": "BCC 5",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "ENG112D"
     },
     {
         "room": "BCC 6",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "INS212A"
     },
     {
         "room": "BCC 6",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "COM349A"
     },
     {
         "room": "BCC7",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "INS212B"
     },
     {
         "room": "BCC8",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "INS221A"
     },
     {
         "room": "BCC8",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "DBM022A"
     },
     {
         "room": "BCC9",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "INS221B"
     },
     {
         "room": "BCC9",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "DIR010A"
     },
     {
         "room": "BCC10",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "ICO036A"
     },
     {
         "room": "BCC10",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "ICC092A"
     },
     {
         "room": "1CT114",
-        "day_date": "Wednesday",
+        "day": "WEDNESDAY",
+        "date": "14/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DICT121A"
     },
     {
         "room": "LR14",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "PHL111A"
     },
     {
         "room": "SB-305",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "TPC202A"
     },
     {
         "room": "SB-305",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "TPC426A"
     },
     {
         "room": "BCC1",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "SOC111A"
     },
     {
         "room": "BCC1",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "BUS211A"
     },
     {
         "room": "BCC2",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "SOC314A"
     },
     {
         "room": "BCC2",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "COM302A"
     },
     {
         "room": "BCC3",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "ACC314A"
     },
     {
         "room": "BCC3",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MAT102A"
     },
     {
         "room": "BCC3",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "COM321A"
     },
     {
         "room": "BCC 5",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "BIL212A"
     },
     {
         "room": "BCC 5",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "IRS200A"
     },
     {
         "room": "BCC 6",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "BUS323A"
     },
     {
         "room": "BCC 6",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "BUS324A"
     },
     {
         "room": "BCC 6",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "IRS430A"
     },
     {
         "room": "BCC7",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "INS313A"
     },
     {
         "room": "BCC7",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "PEA242A"
     },
     {
         "room": "BCC8",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "BUS313A"
     },
     {
         "room": "BCC8",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "PSY408G(A)"
     },
     {
         "room": "BCC9",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "DEV414A"
     },
     {
         "room": "BCC10",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "DBM012A"
     },
     {
         "room": "BCC10",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "DBM030A"
     },
     {
         "room": "BCC11",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "ICO026A"
     },
     {
         "room": "1CT114",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "BMS100A"
     },
     {
         "room": "1CT114",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "BMS101A"
     },
     {
         "room": "ICT 115",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "DICT122A"
     },
     {
         "room": "ICT 115",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "3:00PM-5:00PM",
         "unit_code": "DICT231A"
     },
     {
         "room": "MUS1",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "MUS118A(A)"
     },
     {
         "room": "MUS1",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MUS314A"
     },
     {
         "room": "MUS2",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "10:00AM-12:00PM",
         "unit_code": "MUS496A"
     },
     {
         "room": "MUS2",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MUS419B(B)"
     },
     {
         "room": "MUS3",
-        "day_date": "Thursday",
+        "day": "THURSDAY",
+        "date": "15/08/2024",
         "time": "12:30PM-2:30PM",
         "unit_code": "MUS419A(A)"
     },
     {
         "room": "SB-G03",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DAG023A"
     },
     {
         "room": "BCC1",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "COM426A"
     },
     {
         "room": "BCC2",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "ENV200A"
     },
     {
         "room": "BCC2",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "FRE414A"
     },
     {
         "room": "BCC2",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "ACC111B"
     },
     {
         "room": "BCC3",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "FRE214A"
     },
     {
         "room": "BCC3",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "ACC112A"
     },
     {
         "room": "BCC 5",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "ACC211A"
     },
     {
         "room": "BCC 5",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "LIT111A"
     },
     {
         "room": "BCC 5",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "ACS211A/MIS222A"
     },
     {
         "room": "BCC 6",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "ACS211B"
     },
     {
         "room": "BCC7",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "DAG036A"
     },
     {
         "room": "BCC7",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "COM226A"
     },
     {
         "room": "BCC8",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "MIS211A"
     },
     {
         "room": "BCC8",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "DBM010A"
     },
     {
         "room": "BCC8",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "DEV210A"
     },
     {
         "room": "BCC9",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "TPC414A"
     },
     {
         "room": "BCC9",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "IRS220A"
     },
     {
         "room": "BCC10",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "BUS321A"
     },
     {
         "room": "BCC10",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "PSY112A"
     },
     {
         "room": "BCC11",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "ICO067A"
     },
     {
         "room": "1CT114",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "ACS401A"
     },
     {
         "room": "1CT114",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "11:30PM-1:30PM",
         "unit_code": "ACS114A/MIS114A"
     },
     {
         "room": "ICT 115",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "9:00AM-11:00AM",
         "unit_code": "DICT114A"
     },
     {
         "room": "ICT 115",
-        "day_date": "Friday",
+        "day": "FRIDAY",
+        "date": "16/08/2024",
         "time": "2:00PM-4:00PM",
         "unit_code": "DICT232A"
     }
