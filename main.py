@@ -20,18 +20,18 @@ class ExcelMapper:
 
     def map_headings(
         self,
-        header_row=0,
-        time_row=2,
-        room_col=0,
-        chapel_label="CHAPEL",
+        header_row=0,  # The header row that contains the day and date information
+        time_row=1,  # The row that contains the times (second row in your case)
+        room_col=0,  # The column that contains the room names
+        chapel_label="CHAPEL",  # Label for rooms we want to skip
         day_columns={
-            "Monday ": (1, 3),  # B-D
-            "Tuesday": (4, 7),  # E-H
-            "Wednesday": (8, 10),  # I-K
-            "Thursday": (11, 14),  # L-O
-            "Friday": (15, 17),  # P-R
+            "Monday": (1, 3),  # Columns B-D
+            "Tuesday": (4, 7),  # Columns E-H
+            "Wednesday": (8, 10),  # Columns I-K
+            "Thursday": (11, 14),  # Columns L-O
+            "Friday": (15, 17),  # Columns P-R
         },
-        excluded_columns=[4, 11],  # 1-based indices for E and L
+        excluded_columns=[4, 11],  # Exclude specific columns (1-based indices)
     ):
         """
         Map headings (room, day & date, time, and unit code) to a clean JSON format.
@@ -52,17 +52,21 @@ class ExcelMapper:
                 if col + 1 not in excluded_columns
             ]
 
-            # Get times for this day's columns
+            # Get times for this day's columns (from the second row)
             times = []
             for col in valid_columns:
                 time_value = df.iloc[time_row, col]
-                if pd.isna(time_value):
-                    times.append("")
+                print(
+                    f"Checking time for {day} at column {col}: {time_value}"
+                )  # Debug line
+                if pd.isna(time_value) or str(time_value).strip() == "":
+                    times.append("")  # If time is missing, add an empty string
                 else:
                     # If it's a datetime, format it, otherwise keep as string
                     if isinstance(time_value, pd.Timestamp):
                         times.append(time_value.strftime("%H:%M"))
                     else:
+                        # Handle time as a string, strip any surrounding spaces
                         times.append(str(time_value).strip())
 
             # Get day and date information
@@ -80,7 +84,9 @@ class ExcelMapper:
                 day_part, date_part = day, ""
 
             # Extract unit data
-            for i in range(time_row + 1, len(df)):
+            for i in range(
+                time_row + 1, len(df)
+            ):  # Start extracting from the row after time
                 room = df.iloc[i, room_col]
                 room = str(room).strip() if pd.notna(room) else None
                 if not room or room == chapel_label:
