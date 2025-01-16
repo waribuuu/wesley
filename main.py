@@ -54,11 +54,11 @@ class ExcelMapper:
 
         # Loop through day columns to map data
         for day, (start_col, end_col) in day_columns.items():
-            # Adjust start and end to account for excluded columns
+            # Get valid columns (excluding the specified columns)
             valid_columns = [
                 col
                 for col in range(start_col, end_col + 1)
-                if col + 1 not in excluded_columns  # Convert 0-based index to 1-based
+                if col + 1 not in excluded_columns
             ]
 
             # Extract day_date for all columns in the range (keep excluded ones for day_date)
@@ -95,7 +95,7 @@ class ExcelMapper:
                         output.append(
                             {
                                 "room": room,
-                                "day_date": day_date[col_idx],
+                                "day_date": day,
                                 "time": time[col_idx],
                                 "unit_code": unit_code,
                             }
