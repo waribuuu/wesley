@@ -4,7 +4,7 @@ from excel_mapper import ExcelMapper
 from timetable_gui import TimetableGUI
 
 if __name__ == "__main__":
-    filepath = "exam.xlsx"
+    filepath = "exam2.xlsx"
 
     try:
         # Load and process the Excel file

@@ -25,7 +25,6 @@ class ExcelMapper:
 
         # Room column: Always assumed to be the first column
         room_col = 0
-        print(f"Room column position: Row 1 to {len(df)}, Column {room_col + 1}")
 
         # Detect all day-date rows
         day_date_rows = self._find_rows_by_pattern(
@@ -34,15 +33,8 @@ class ExcelMapper:
         if not day_date_rows:
             raise ValueError("No day-date rows detected in the Excel file.")
 
-        for row in day_date_rows:
-            print(
-                f"Day-date row position: Row {row + 1}, Columns 1 to {len(df.columns)}"
-            )
-
         # Determine time rows: Rows immediately below day-date rows
         time_rows = [row + 1 for row in day_date_rows if row + 1 < len(df)]
-        for row in time_rows:
-            print(f"Time row position: Row {row + 1}, Columns 2 to {len(df.columns)}")
 
         # Map each day-date to its column range
         day_date_map = self._map_day_date_columns(df, day_date_rows)
@@ -96,22 +88,27 @@ class ExcelMapper:
     @staticmethod
     def _map_day_date_columns(df, day_date_rows):
         day_date_map = {}
-        previous_col = None
+        current_day_date = None
+        current_start_col = None
+
         for row in day_date_rows:
             for col in range(len(df.columns)):
                 cell = df.iloc[row, col]
                 if isinstance(cell, str) and re.match(
                     r"^[A-Za-z]+\s\d{2}/\d{2}/\d{2}$", cell.strip()
                 ):
-                    if previous_col is not None:
-                        day_date_map[previous_col] = (day, date)
-                    parts = cell.split(" ", 1)
-                    day = parts[0]
-                    date = parts[1] if len(parts) > 1 else ""
-                    previous_col = (col, len(df.columns) - 1)
+                    if current_day_date is not None:
+                        # Save the previous day-date mapping
+                        day_date_map[(current_start_col, col - 1)] = current_day_date
 
-        if previous_col is not None:
-            day_date_map[previous_col] = (day, date)
+                    # Parse the new day and date
+                    parts = cell.strip().split(" ", 1)
+                    current_day_date = (parts[0], parts[1] if len(parts) > 1 else "")
+                    current_start_col = col
+
+        # Add the last range if available
+        if current_day_date is not None:
+            day_date_map[(current_start_col, len(df.columns) - 1)] = current_day_date
 
         return day_date_map
 
