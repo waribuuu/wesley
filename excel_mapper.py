@@ -33,8 +33,11 @@ class ExcelMapper:
         if not day_date_rows:
             raise ValueError("No day-date rows detected in the Excel file.")
 
-        # Determine time rows: Rows immediately below day-date rows
+        # Ensure we have time rows directly below the day-date rows
         time_rows = [row + 1 for row in day_date_rows if row + 1 < len(df)]
+
+        if not time_rows:
+            raise ValueError("No corresponding time rows found.")
 
         # Map each day-date to its column range
         day_date_map = self._map_day_date_columns(df, day_date_rows)
@@ -52,12 +55,15 @@ class ExcelMapper:
             # Traverse day-date regions and extract data
             for (start_col, end_col), (day, date) in day_date_map.items():
                 valid_columns = list(range(start_col, end_col + 1))
+
+                # Assign time based on the detected time rows
                 times = [
                     self._format_time(df.iloc[time_row, col])
                     for time_row in time_rows
                     for col in valid_columns
                 ]
 
+                # Process unit codes in the timetable and match them with time
                 for col_idx, unit_code in enumerate(df.iloc[i, valid_columns].tolist()):
                     unit_code = str(unit_code).strip() if pd.notna(unit_code) else None
                     if unit_code and unit_code != chapel_label:
@@ -67,7 +73,7 @@ class ExcelMapper:
                                 "day": day,
                                 "date": date,
                                 "time": times[col_idx % len(times)],
-                                "unit_code": unit_code,
+                                "unit_code": unit_code.replace(" ", ""),
                             }
                         )
 

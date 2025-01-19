@@ -123,175 +123,175 @@
         "day": "TUESDAY",
         "date": "23/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 422A"
+        "unit_code": "LLB422A"
     },
     {
         "room": "LR 07",
         "day": "TUESDAY",
         "date": "23/04/24",
         "time": "12:30PM-2:30PM",
-        "unit_code": "LLB 310A"
+        "unit_code": "LLB310A"
     },
     {
         "room": "LR 07",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 405A"
+        "unit_code": "LLB405A"
     },
     {
         "room": "LR10",
         "day": "THURSDAY",
         "date": "25/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 301A"
+        "unit_code": "LLB301A"
     },
     {
         "room": "LR11",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 314A"
+        "unit_code": "LLB314A"
     },
     {
         "room": "LR11",
         "day": "WEDNESDAY",
         "date": "24/04/24",
         "time": "11:30PM-1:30PM",
-        "unit_code": "LLB 406A"
+        "unit_code": "LLB406A"
     },
     {
         "room": "LR11",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 104A"
+        "unit_code": "LLB104A"
     },
     {
         "room": "LR12",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 206A"
+        "unit_code": "LLB206A"
     },
     {
         "room": "LR12",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "11:30PM-1:30PM",
-        "unit_code": "LLB 403A"
+        "unit_code": "LLB403A"
     },
     {
         "room": "LR12",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "2:00PM-4:00PM",
-        "unit_code": "LLB 411A"
+        "unit_code": "LLB411A"
     },
     {
         "room": "LR12",
         "day": "TUESDAY",
         "date": "23/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 210A"
+        "unit_code": "LLB210A"
     },
     {
         "room": "LR12",
         "day": "WEDNESDAY",
         "date": "24/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 303A"
+        "unit_code": "LLB303A"
     },
     {
         "room": "LR12",
         "day": "THURSDAY",
         "date": "25/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 207A"
+        "unit_code": "LLB207A"
     },
     {
         "room": "LR12",
         "day": "THURSDAY",
         "date": "25/04/24",
         "time": "3:00PM-5:00PM",
-        "unit_code": "LLB 204A"
+        "unit_code": "LLB204A"
     },
     {
         "room": "LR12",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 209A"
+        "unit_code": "LLB209A"
     },
     {
         "room": "LR12",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "2:00PM-4:00PM",
-        "unit_code": "LLB 212A"
+        "unit_code": "LLB212A"
     },
     {
         "room": "LR13",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 206B"
+        "unit_code": "LLB206B"
     },
     {
         "room": "LR13",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "11:30PM-1:30PM",
-        "unit_code": "LLB 305A"
+        "unit_code": "LLB305A"
     },
     {
         "room": "LR13",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "2:00PM-4:00PM",
-        "unit_code": "LLB 202A"
+        "unit_code": "LLB202A"
     },
     {
         "room": "LR13",
         "day": "TUESDAY",
         "date": "23/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 210B"
+        "unit_code": "LLB210B"
     },
     {
         "room": "LR13",
         "day": "TUESDAY",
         "date": "23/04/24",
         "time": "12:30PM-2:30PM",
-        "unit_code": "LLB 105A"
+        "unit_code": "LLB105A"
     },
     {
         "room": "LR13",
         "day": "WEDNESDAY",
         "date": "24/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 402A"
+        "unit_code": "LLB402A"
     },
     {
         "room": "LR13",
         "day": "WEDNESDAY",
         "date": "24/04/24",
         "time": "11:30PM-1:30PM",
-        "unit_code": "LLB 308A"
+        "unit_code": "LLB308A"
     },
     {
         "room": "LR13",
         "day": "THURSDAY",
         "date": "25/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 207B"
+        "unit_code": "LLB207B"
     },
     {
         "room": "LR13",
         "day": "THURSDAY",
         "date": "25/04/24",
         "time": "12:30PM-2:30PM",
-        "unit_code": "LLB 407A"
+        "unit_code": "LLB407A"
     },
     {
         "room": "LR13",
@@ -305,21 +305,21 @@
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 209B"
+        "unit_code": "LLB209B"
     },
     {
         "room": "LR13",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "11:30PM-1:30PM",
-        "unit_code": "LLB 307A"
+        "unit_code": "LLB307A"
     },
     {
         "room": "LR13",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "2:00PM-4:00PM",
-        "unit_code": "LLB 408A"
+        "unit_code": "LLB408A"
     },
     {
         "room": "LR14",
@@ -2153,98 +2153,98 @@
         "day": "WEDNESDAY",
         "date": "24/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 315A"
+        "unit_code": "LLB315A"
     },
     {
         "room": "LR11",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 409A"
+        "unit_code": "LLB409A"
     },
     {
         "room": "LR12",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 208A"
+        "unit_code": "LLB208A"
     },
     {
         "room": "LR12",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "11:30PM-1:30PM",
-        "unit_code": "LLB 401A"
+        "unit_code": "LLB401A"
     },
     {
         "room": "LR12",
         "day": "WEDNESDAY",
         "date": "24/04/24",
         "time": "2:00PM-4:00PM",
-        "unit_code": "LLB 107A"
+        "unit_code": "LLB107A"
     },
     {
         "room": "LR12",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 205A"
+        "unit_code": "LLB205A"
     },
     {
         "room": "LR13",
         "day": "MONDAY",
         "date": "22/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 208B"
+        "unit_code": "LLB208B"
     },
     {
         "room": "LR13",
         "day": "TUESDAY",
         "date": "23/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 304A"
+        "unit_code": "LLB304A"
     },
     {
         "room": "LR13",
         "day": "TUESDAY",
         "date": "23/04/24",
         "time": "3:00PM-5:00PM",
-        "unit_code": "LLB 203A"
+        "unit_code": "LLB203A"
     },
     {
         "room": "LR13",
         "day": "THURSDAY",
         "date": "25/04/24",
         "time": "10:00AM-12:00PM",
-        "unit_code": "LLB 309A"
+        "unit_code": "LLB309A"
     },
     {
         "room": "LR13",
         "day": "THURSDAY",
         "date": "25/04/24",
         "time": "12:30PM-2:30PM",
-        "unit_code": "LLB 302A"
+        "unit_code": "LLB302A"
     },
     {
         "room": "LR13",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "9:00AM-11:00AM",
-        "unit_code": "LLB 205B"
+        "unit_code": "LLB205B"
     },
     {
         "room": "LR13",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "11:30PM-1:30PM",
-        "unit_code": "LLB 106A"
+        "unit_code": "LLB106A"
     },
     {
         "room": "LR13",
         "day": "FRIDAY",
         "date": "26/04/24",
         "time": "2:00PM-4:00PM",
-        "unit_code": "LLB 410A"
+        "unit_code": "LLB410A"
     },
     {
         "room": "LR14",
