@@ -53,7 +53,7 @@ class ExcelMapper:
 
         # Detect all day-date rows
         day_date_rows = self._find_rows_by_pattern(
-            df, r"^[A-Za-z]+\s\d{2}/\d{2}/\d{2}$"
+            df, r"^[A-Za-z]+\s+\d{2}/\d{2}/\d{2,4}$"
         )
         if not day_date_rows:
             logger.warning("No day-date rows detected in the Excel file.")
@@ -73,11 +73,15 @@ class ExcelMapper:
         day_date_map = self._map_day_date_columns(df, day_date_rows)
         logger.info(f"Day-date column mapping: {day_date_map}")
 
-        # Process each room and generate timetable entries
+        # Identify data rows (exclude day-date rows, time rows, header rows, and empty rows)
+        data_rows = self._identify_data_rows(df, day_date_rows, time_rows)
+        logger.info(f"Data rows identified at indices: {data_rows}")
+
+        # Process each data row and generate timetable entries
         rooms_processed = 0
-        for i in range(len(df)):
+        for i in data_rows:
             room = self._clean_cell_value(df.iloc[i, room_col])
-            if not room or room.upper() == chapel_label.upper():
+            if not room or room.upper() == chapel_label.upper() or room.upper() == "ROOM":
                 continue
 
             rooms_processed += 1
@@ -96,7 +100,7 @@ class ExcelMapper:
                         continue
                         
                     unit_code = self._clean_cell_value(df.iloc[i, col])
-                    if unit_code and unit_code.upper() != chapel_label.upper():
+                    if unit_code and unit_code.upper() != chapel_label.upper() and not self._is_time_value(unit_code):
                         time_value = times[col_idx] if col_idx < len(times) else ""
                         
                         entry = {
@@ -111,6 +115,58 @@ class ExcelMapper:
 
         logger.info(f"Processed {rooms_processed} rooms, generated {len(output)} timetable entries")
         return output
+
+    def _identify_data_rows(self, df: pd.DataFrame, day_date_rows: List[int], 
+                           time_rows: List[int]) -> List[int]:
+        """
+        Identify rows that contain actual timetable data (not headers, day-dates, or times).
+        """
+        data_rows = []
+        excluded_rows = set(day_date_rows + time_rows)
+        
+        for i in range(len(df)):
+            # Skip excluded rows
+            if i in excluded_rows:
+                continue
+                
+            # Check if this row has meaningful room data
+            room_value = self._clean_cell_value(df.iloc[i, 0])
+            
+            # Skip if no room value or if it's a header
+            if not room_value or room_value.upper() in ["ROOM", "ROOMS"]:
+                continue
+                
+            # Check if the row contains any non-empty cells beyond the room column
+            has_data = False
+            for col in range(1, len(df.columns)):
+                cell_value = self._clean_cell_value(df.iloc[i, col])
+                if cell_value:
+                    has_data = True
+                    break
+                    
+            if has_data:
+                data_rows.append(i)
+                
+        return data_rows
+
+    def _is_time_value(self, value: str) -> bool:
+        """Check if a value appears to be a time value."""
+        if not value:
+            return False
+            
+        # Common time patterns
+        time_patterns = [
+            r"^\d{1,2}:\d{2}(AM|PM)?$",  # 9:00AM, 11:30PM, etc.
+            r"^\d{1,2}:\d{2}(AM|PM)?-\d{1,2}:\d{2}(AM|PM)?$",  # 9:00AM-11:00AM
+            r"^\d{1,2}\.\d{2}(AM|PM)?$",  # 9.00AM
+            r"^\d{1,2}\.\d{2}(AM|PM)?-\d{1,2}\.\d{2}(AM|PM)?$",  # 9.00AM-11.00AM
+        ]
+        
+        for pattern in time_patterns:
+            if re.match(pattern, value.upper()):
+                return True
+                
+        return False
 
     def _clean_cell_value(self, cell_value: Any) -> Optional[str]:
         """Clean and validate cell values."""
@@ -166,13 +222,13 @@ class ExcelMapper:
 
             for col in range(len(df.columns)):
                 cell = df.iloc[row, col]
-                if isinstance(cell, str) and re.match(r"^[A-Za-z]+\s\d{2}/\d{2}/\d{2}$", cell.strip()):
+                if isinstance(cell, str) and re.match(r"^[A-Za-z]+\s+\d{2}/\d{2}/\d{2,4}$", cell.strip()):
                     # Save previous mapping if it exists
                     if current_day_date is not None and current_start_col is not None:
                         day_date_map[(current_start_col, col - 1)] = current_day_date
 
                     # Parse new day and date
-                    parts = cell.strip().split(" ", 1)
+                    parts = cell.strip().split(None, 1)  # Split on any whitespace
                     current_day_date = (parts[0], parts[1] if len(parts) > 1 else "")
                     current_start_col = col
 
@@ -194,18 +250,24 @@ class ExcelMapper:
         # Handle string time formats
         time_str = str(time_value).strip()
         
-        # Try to parse common time formats
+        # Return time ranges as-is if they match expected patterns
+        if re.match(r"^\d{1,2}:\d{2}(AM|PM)?-\d{1,2}:\d{2}(AM|PM)?$", time_str.upper()):
+            return time_str
+            
+        # Try to parse individual time formats
         time_patterns = [
-            r"^(\d{1,2}):(\d{2})$",  # HH:MM or H:MM
-            r"^(\d{1,2})\.(\d{2})$",  # HH.MM or H.MM
-            r"^(\d{1,2})(\d{2})$"     # HHMM or HMM
+            r"^(\d{1,2}):(\d{2})(AM|PM)?$",  # HH:MM or H:MM with optional AM/PM
+            r"^(\d{1,2})\.(\d{2})(AM|PM)?$",  # HH.MM or H.MM with optional AM/PM
+            r"^(\d{1,2})(\d{2})(AM|PM)?$"     # HHMM or HMM with optional AM/PM
         ]
         
         for pattern in time_patterns:
-            match = re.match(pattern, time_str)
+            match = re.match(pattern, time_str.upper())
             if match:
-                hours, minutes = match.groups()
-                return f"{int(hours):02d}:{int(minutes):02d}"
+                hours, minutes = match.groups()[:2]
+                suffix = match.groups()[2] if len(match.groups()) > 2 else ""
+                formatted_time = f"{int(hours):02d}:{int(minutes):02d}"
+                return formatted_time + (suffix if suffix else "")
         
         return time_str
 
