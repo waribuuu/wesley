@@ -297,7 +297,10 @@ class ExcelMapper:
 # Enhanced main script with better error handling
 def main():
     """Main execution function with comprehensive error handling."""
-    filepath = "exam2.xlsx"
+    import sys
+    
+    # Allow command-line argument for custom filepath
+    filepath = sys.argv[1] if len(sys.argv) > 1 else "exam2.xlsx"
     output_file = "output.json"
 
     try:
